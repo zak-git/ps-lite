@@ -55,11 +55,11 @@ void Customer::Receiving() {
       break;
     }
     recv_handle_(recv);
-    if (!recv.meta.request) {
-      std::lock_guard<std::mutex> lk(tracker_mu_);
-      tracker_[recv.meta.timestamp].second++;
-      tracker_cond_.notify_all();
-    }
+    //if (!recv.meta.request) {
+    //  std::lock_guard<std::mutex> lk(tracker_mu_);
+    //  tracker_[recv.meta.timestamp].second++;
+    //  tracker_cond_.notify_all();
+    //}
   }
 }
 
