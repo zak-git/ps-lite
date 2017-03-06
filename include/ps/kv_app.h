@@ -98,6 +98,7 @@ class KVWorker : public SimpleApp {
     KVPairs<Val> kvs;
     kvs.keys = keys;
     kvs.lens = lens;
+    kvs.vals = vals;
     Receive(kvs);
     vals = kvs.vals;
   }
